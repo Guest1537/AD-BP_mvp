@@ -6,7 +6,9 @@
 
 **Informações sobre os atributos**
 
-`CÓDIGO`
+```
+CÓDIGO
+```
 
 ## 2. Carga de dados
  
@@ -21,19 +23,30 @@
 
  ### 3.1. Estatístícas descritivas
 
- `print(dataset.shape)`
+ ```
+ print(dataset.shape)
+ ```
 
- `print(dataset.info)`
+RANDOM TEST TEXT
 
- `dataset.head(10)`
+ ```
+ print(dataset.info)
+ ```
 
- `dataset.tail(10)`
+ ```
+ dataset.head(10)
+ ```
 
+ ```
+ dataset.tail(10)
+ ```
  `dataset.dtypes`
 
  Out[]:
 
-`print(dataset.grouphy('class').size())`
+```
+print(dataset.grouphy('class').size())
+```
 
 ### 3.2. Visualizações unimodais
 
@@ -60,17 +73,25 @@ Explicação dos gráficos
 
 ### 3.3. Visualizações Multimodais
 
-`sns.heatmap(dataset.corr(), annot=True, cmap='RdBu'`
+```
+sns.heatmap(dataset.corr(), annot=True, cmap='RdBu'
+```
 
-`sns.pairplot(dataset)`
+```
+sns.pairplot(dataset)
+```
 
-`sns.pairplot(dataset, hue = "class", height = 2.5)`
+```
+sns.pairplot(dataset, hue = "class", height = 2.5)
+```
 
 ## 4. Pré-processamento de dados
 
 ### 4.1. Tratamento de *missings* e limpeza
 
-`dataset.isnull().sum()`
+```
+dataset.isnull().sum()
+```
 
 ```
 col = list(dataset.columns)
@@ -79,8 +100,10 @@ atributos.replace(0, np.nan, inplace=True)
 ms.matrix(atributos)
 ```
 
-`atributos.drop(['',''], axis=1, inplace=True)
-ms.matrix(atributos)`
+```
+atributos.drop(['',''], axis=1, inplace=True)
+ms.matrix(atributos)
+```
 
 ```
 # Explicação código
@@ -98,9 +121,11 @@ atributos[''].fillna(atributos[''].median(), inplace=True)
 ms.matrix(atributos)
 ```
 
-`datasetSemMissings = atributos
+```
+datasetSemMissings = atributos
 datasetSemMissings['class'] = dataset['class']
-datasetSemMissings.head()`
+datasetSemMissings.head()
+```
 
 ### 4.2. Separação em conjunto de treino e conjunto teste
 
