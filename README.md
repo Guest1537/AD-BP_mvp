@@ -37,18 +37,24 @@
 
 ### 3.2. Visualizações unimodais
 
-`dataset.hist(figsize = (15,10))
-plt.show()`
+```
+dataset.hist(figsize = (15,10))
+plt.show()
+```
 
 Explicação dos gráficos
 
-`dataset.plot(kiund = 'density', sublopts = True, layout (3,3), sharez = False, figsize = (15,10))
-plt.show()`
+```
+dataset.plot(kiund = 'density', sublopts = True, layout (3,3), sharez = False, figsize = (15,10))
+plt.show()
+```
 
 Explicação dos gráficos
 
-`dataset.plot(kind = 'box', subplots = True, layout (3,3), sharex = False, sharey = False, figsuze = (15,10))
-plt.show()`
+```
+dataset.plot(kind = 'box', subplots = True, layout (3,3), sharex = False, sharey = False, figsuze = (15,10))
+plt.show()
+```
 
 Explicação dos gráficos
 
@@ -66,19 +72,31 @@ Explicação dos gráficos
 
 `dataset.isnull().sum()`
 
-`col = list(dataset.columns)
+```
+col = list(dataset.columns)
 atributos = dataset[col[0:-1]]
 atributos.replace(0, np.nan, inplace=True)
-ms.matrix(atributos)`
+ms.matrix(atributos)
+```
 
 `atributos.drop(['',''], axis=1, inplace=True)
 ms.matrix(atributos)`
 
-`atributos[''].fillna(0, inplace=True)
+```
+# Explicação código
+
+atributos[''].fillna(0, inplace=True)
+
+# Explicação código
+
 atributos[''].fillna(atributos[''].median(), inplace=True)
 atributos[''].fillna(atributos[''].median(), inplace=True)
 atributos[''].fillna(atributos[''].median(), inplace=True)
-ms.matrix(atributos)`
+
+# Explicação código
+
+ms.matrix(atributos)
+```
 
 `datasetSemMissings = atributos
 datasetSemMissings['class'] = dataset['class']
@@ -86,18 +104,22 @@ datasetSemMissings.head()`
 
 ### 4.2. Separação em conjunto de treino e conjunto teste
 
-`test_size = 0.20
+```
+test_size = 0.20
 seed = 7
 array = dataset.values
 X = array[:,0:8]
 Y = array[:,8]
 X_train, X_test, Y_train, Y_test = train_test_split (X, Y, 
-  test_size=test_size, suffle=True, random_state=seed, stratify=Y)`
+  test_size=test_size, suffle=True, random_state=seed, stratify=Y)
+```
 
-`array = datasetSemMissings.values
+```
+array = datasetSemMissings.values
 X_sm = array[:,0:6]
 Y_sm = array[:,6]
 X_train_sm, X_test_sm, Y_train_sm, Y_test_sm = train_test_split (X_sm, Y_sm, 
-  test_size=test_size, shuffle=True, random_state=seed, stratify=Y_sm)`
+  test_size=test_size, shuffle=True, random_state=seed, stratify=Y_sm)
+```
 
-#@ Conslusão
+## Conslusão
