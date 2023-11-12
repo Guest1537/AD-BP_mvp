@@ -13,7 +13,8 @@
 > Carrega arquivo csv usando Pandas usando uma URL
  Informa a URL de importação do datares
  
-`dataset.head()`
+> dataset.head()
+
  Out[]:
 
  ## 3. Análise de dados
