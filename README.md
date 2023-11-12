@@ -1,6 +1,6 @@
 # MVP - Análise de Dados e Boas Práticas
 
-## Pedro Caleffi Barbosa
+### Pedro Caleffi Barbosa
 
 ## 1. Definição do problema
 
@@ -12,35 +12,37 @@ CÓDIGO
 
 ## 2. Carga de dados
  
-> Carrega arquivo csv usando Pandas usando uma URL
+ Carrega arquivo csv usando Pandas usando uma URL
  Informa a URL de importação do datares
  
-> dataset.head()
+```
+dataset.head()
+```
+ 
+Out[]:
 
- Out[]:
+## 3. Análise de dados
 
- ## 3. Análise de dados
+### 3.1. Estatístícas descritivas
 
- ### 3.1. Estatístícas descritivas
-
- ```
- print(dataset.shape)
- ```
+```
+print(dataset.shape)
+```
 
 RANDOM TEST TEXT
 
- ```
- print(dataset.info)
- ```
+```
+print(dataset.info)
+```
 
- ```
- dataset.head(10)
- ```
+```
+dataset.head(10)
+```
 
- ```
- dataset.tail(10)
- ```
- `dataset.dtypes`
+```
+dataset.tail(10)
+```
+`dataset.dtypes`
 
  Out[]:
 
